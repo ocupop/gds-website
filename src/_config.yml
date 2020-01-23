@@ -1,0 +1,15 @@
+title: GDS Website
+email: dev@ocupop.com
+url: "http://client_url.com"
+permalink: pretty
+description: "Google Developer Studio"
+# Build settings
+safe: false
+sass:
+  # style: compressed
+  sass_dir: _scss
+
+start_project_link: 'https://docs.google.com/forms/d/e/1FAIpQLSc33C9IPbsinKhfpqQzzdqpZa6Y-3cVcRcYoBoNIlIxJxTWyw/formrestricted'
+
+plugins:
+  - jekyll-sitemap

@@ -1,0 +1,11 @@
+@include media-breakpoint-down(md) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .container {
+    max-width: 100%;
+  }
+}

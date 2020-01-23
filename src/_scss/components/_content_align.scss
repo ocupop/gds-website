@@ -1,0 +1,18 @@
+.content-align {
+  max-width: 100%;
+  padding: 30px;
+  @include media-breakpoint-up(xl) {
+    max-width: 495px;
+    &.content-right {
+      margin-right: auto;
+      padding-left: 75px;
+    }
+    &.content-left {
+      margin-left: auto;
+      padding-right: 75px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 50px
+  }
+}

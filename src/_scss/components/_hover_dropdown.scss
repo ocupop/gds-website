@@ -1,0 +1,36 @@
+.hover-trigger {
+  position: relative;
+  > .hover-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    background-color: $white;
+    min-width: 200px;
+    padding: 10px;
+  }
+  &:hover {
+    > .hover-dropdown {
+      @include animation(hoverMenu, 0.5s);
+      animation-delay: 0.2s;
+      opacity: 1;
+      height: auto;
+      visibility: visible;
+      .hover-content {
+        height: auto;
+      }
+    }
+  }
+}
+
+.hover-dropdown-item {
+  display: block;
+  font-family: $headings-font-family;
+  color: $gray-600;
+  font-size: 14px;
+  &:hover {
+    color: $gray-600;
+  }
+}

@@ -1,0 +1,30 @@
+.project {
+  section {
+    padding: 0;
+    @include media-breakpoint-up(lg){
+      padding: 60px 0;
+      &.parallax-section {
+        padding-bottom: 150px;
+        &.section-last {
+          padding-bottom: 175px;
+        }
+      }
+    }
+  }
+  .copy-row {
+    @include media-breakpoint-down(md) {
+      .col-md-4,
+      .col-lg-4 {
+        .content {
+          padding-bottom: 0;
+        } 
+      }
+      .col-md-8,
+      .col-lg-8 {
+        .content {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}

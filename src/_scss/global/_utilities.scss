@@ -1,0 +1,132 @@
+%clearfix {
+  zoom: 1;
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.content {
+  position: relative;
+  padding: 20px;
+  @extend %clearfix;
+}
+
+
+.box-shadow {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+// Responsive containers
+.container-4x3 {
+  height: 0;
+  padding-top: 60%;
+  width: 100%;
+  position: relative;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Background images
+.bg-image {
+  display: block;
+  height: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  &.bg-image-auto {
+    height: auto;
+  }
+  &.aspect-1x1 {
+    padding-top: 100%;
+  }
+  &.aspect-2x1 {
+    padding-top: 50%;
+  }
+  &.aspect-3x1 {
+    padding-top: 33%;
+  }
+  &.aspect-4x1 {
+    padding-top: 25%;
+  }
+  &.aspect-4x3 {
+    padding-top: 75%;
+  }
+  &.aspect-16x9 {
+    padding-top: 56.25%;
+  }
+  &.aspect-5x7 {
+    padding-top: 120%;
+  }
+}
+
+// Sticky behavior
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.pl-75 {
+  @include media-breakpoint-up(lg) {
+    padding-left: 75px;
+  }
+}
+
+.pr-75 {
+  @include media-breakpoint-up(lg) {
+    padding-right: 75px;
+  }
+}
+
+// Arrows/Carets - TODO (TEST)
+.arrow {
+  &::after,
+  &::before {
+    content: " ";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+  }
+  &.arrow-right {
+    &::after {
+      border-color: rgba($white, 0);
+      border-left-color: #ffffff;
+      border-width: 30px;
+      margin-top: -30px;
+    }
+    &::before {
+      border-color: rgba($gray-400, 0);
+      border-left-color: $gray-400;
+      border-width: 31px;
+      margin-top: -31px;
+    }  
+  }
+}
+
+.quote {
+  position: relative;
+  &::before {
+    content: '“';
+    position: absolute;
+    left: -40px;
+    top: -65px;
+    display: block;
+    font-size: 190px;
+    color: $gray-100;
+    z-index: -1;
+  }
+}

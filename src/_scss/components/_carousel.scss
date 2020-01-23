@@ -1,0 +1,14 @@
+.carousel {
+  margin-bottom: 30px;
+  .carousel-indicators {
+    bottom: -50px;
+    li {
+      border-radius: 50%;
+      width: 13px;
+      height: 13px;
+      background-color: $dark;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}

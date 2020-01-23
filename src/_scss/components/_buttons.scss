@@ -1,0 +1,21 @@
+.btn {
+  border-radius: 0;
+  border: 1px solid $gray-500;
+  color: $gray-650;
+  font-family: $headings-font-family;
+  padding-left: 30px;
+  padding-right: 30px;
+  @include transition(0.5s);
+  &:hover {
+    background-color: $gray-650;
+    color: $white;
+  }
+  &.btn-white {
+    border-color: $white;
+    color: $white;
+    &:hover {
+      background-color: $white;
+      color: $gray-650;
+    }
+  }
+}
