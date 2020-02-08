@@ -1,20 +1,9 @@
 import path from 'path'
 import webpack from 'webpack'
-import process from 'process'
-
-const isProduction = (process.env.NODE_ENV === 'production')
 
 let config = {
   mode: 'production',
-  entry: isProduction ? {
-    main: './_scripts/index.js'
-  } : {
-      main: [
-        './_scripts/index.js',
-        'webpack/hot/dev-server',
-        'webpack-hot-middleware/client'
-      ]
-    },
+  entry: { main: './_scripts/index.js' },
   output: {
     filename: './js/main.js',
     path: path.resolve(__dirname, '../src')
@@ -30,34 +19,29 @@ let config = {
           loader: 'babel-loader',
           options: {
             presets: [
-              '@babel/preset-env',
-              '@babel/preset-react'
+              '@babel/preset-env'
             ]
           }
         }
       }
     ]
   },
-  plugins: isProduction ? [
+  plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
     })
-  ] : [
-      new webpack.HotModuleReplacementPlugin()
-    ]
+  ]
 }
 
 
-function buildScripts() {
-
+function scripts() {
   return new Promise(resolve => webpack(config, (err, stats) => {
-
-    if (err) console.log('Webpack', err)
-
-    console.log(stats.toString({ /* stats options */ }))
-
+    if (err) {
+      console.log('Webpack', err)
+    }
+    console.log(stats.toString())
     resolve()
   }))
 }
 
-module.exports = { config, buildScripts }
+module.exports = { config, scripts }
