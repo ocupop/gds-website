@@ -12,8 +12,8 @@ Ocupop's staging site is hosted on Cloudcannon and CD/CI are handled with their 
 2. Start environment: `yarn start`
 3. Navigate to [http://localhost:4000/](http://localhost:4000/)
 
-## Deployment to Firebase ##
+## Prepare for Deployment ##
 1. `cd` to project directory
-2. Start environment: `yarn deploy`
+2. Start environment: `yarn build`
 
 ============
