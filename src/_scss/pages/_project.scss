@@ -31,3 +31,13 @@
     }
   }
 }
+
+.overlay-crop {
+  overflow: hidden;
+  img {
+    margin-left: -2px;
+    margin-right: -2px;
+    max-width: 102%;
+    width: 102%;
+  }
+}
