@@ -14,13 +14,16 @@
   .copy-row {
     @include media-breakpoint-down(md) {
       .col-md-4,
-      .col-lg-4 {
+      .col-lg-4,
+      .col-lg-2,
+      .col-lg-3 {
         .content {
           padding-bottom: 0;
         } 
       }
       .col-md-8,
-      .col-lg-8 {
+      .col-lg-8,
+      .col-lg-9 {
         .content {
           padding-top: 0;
         }
