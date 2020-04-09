@@ -14,9 +14,6 @@
   },
   "author": "Ocupop",
   "license": "MIT",
-  "dependencies": {
-    "lodash": "^4.17.15"
-  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
